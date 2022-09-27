@@ -1,4 +1,5 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
+# coding=utf-8
 from datetime import date, datetime, timedelta
 import argparse
 import json
@@ -39,10 +40,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     config = Settings()
+    print(config.EVERNOTE_PERSONAL_TOKEN)
 
     client = EvernoteClient(
         token=config.EVERNOTE_PERSONAL_TOKEN,
-        sandbox=False # Default: True
+        sandbox=True # Default: True
     )
     noteStore = client.get_note_store()
 
