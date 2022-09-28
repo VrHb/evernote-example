@@ -51,7 +51,7 @@ if __name__ == '__main__':
     day = args.date or date.today()
     context = {
         'date': day.isoformat(),
-        'dow': WEEK_DAYS[day.isoweekday()],
+        'day': WEEK_DAYS[day.isoweekday()],
     }
     print('Title Context is:')
     print(json.dumps(context, ensure_ascii=False, indent=4))
